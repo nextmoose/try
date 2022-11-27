@@ -16,7 +16,7 @@
 		        seed :
 			  let
 			    eval = builtins.tryEval ( try seed ) ;
-			    if eval.success then eval.value else trial ( seed + 1 ) ;
+			    in if eval.success then eval.value else trial ( seed + 1 ) ;
 		       in trial 0 ;
               }
       ) ;

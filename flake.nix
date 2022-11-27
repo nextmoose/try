@@ -27,7 +27,7 @@
 			      if ! builtins.hasAttr "value" attempt then builtins.throw "39d518b8-51df-4156-b82a-a307dd6d6ec6"
 			      else attempt.value ;
 			    in if attempt.success then attempt.value else trial ( seed + 1 ) ;
-		      in builtins.trace ( "${ builtins.typeOf ( trial 0 ) }" ) ( ( try 0 ).value ) ;
+		      in builtins.trace ( "${ builtins.typeOf ( trial ) }" ) ( ( try 0 ).value ) ;
               }
       ) ;
     }

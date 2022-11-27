@@ -25,7 +25,6 @@
 			      else attempt.success ;
 			    value =
 			      if ! builtins.hasAttr "value" attempt then builtins.throw "39d518b8-51df-4156-b82a-a307dd6d6ec6"
-			      else if ! success then builtins.throw "c5d6d901-1048-4a8b-99a3-e3634c25d5ef"
 			      else attempt.value ;
 			    in if attempt.success then attempt.value else trial ( seed + 1 ) ;
 		      in trial 0 ;
